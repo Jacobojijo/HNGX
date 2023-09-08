@@ -13,8 +13,8 @@ app.get('/api', (req, res) => {
     const track = req.query.track;
     const current_day = days_of_week[array_of_day_week];
     const utc_time = new Date().toISOString();
-    const github_file_url = "github/jacobojijo/file";
-    const github_repo_url = "github/ojijo/project";
+    const github_file_url = "https://github.com/Jacobojijo/HNGX/blob/main/task1/endpoint.js";
+    const github_repo_url = "https://github.com/Jacobojijo/HNGX";
     const status_code = 200;
 
     const jsonObject = {
