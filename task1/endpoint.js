@@ -2,11 +2,15 @@ const express = require('express');
 
 const app = express();
 
-const port_number = process.env.port_number || 8000;
+const port_number = process.env.port_number || 6000;
 
 app.listen(port_number);
 const days_of_week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const array_of_day_week = new Date().getDay();
+
+app.use(express.json());
+
+app.post('/api', (req, res) => console.log(req.body));
 
 app.get('/api', (req, res) => {
     const slack_name = req.query.slack_name;
