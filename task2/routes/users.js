@@ -28,7 +28,7 @@ const findPerson = async(req, res) => {
 const updatePerson = async(req, res) => {
     try {
         const id = req.params.id;
-        const person = await Person.findByIdAndUpdate(id, req.params.body);
+        const person = await Person.findByIdAndUpdate(id, req.params.body, { new:true });
         if(!person) {
             console.log("No such a person");
         }
