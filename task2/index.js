@@ -5,7 +5,7 @@ const mongoose = require('mongoose')
 const app = express();
 
 const PORT = process.env.PORT || 5000;
-const dbURL = "mongodb+srv://Ojijo:Jack1998@cluster0.qdy1q8e.mongodb.net/hng-assign?retryWrites=true&w=majority";
+const dbURL = process.env.dbURL
 mongoose.connect(dbURL)
     .then((result) => app.listen(PORT, () => console.log(`Server has started on http://localhost:${PORT}`)))
     .catch((err) => console.log(err));
